@@ -3,6 +3,7 @@
 # Caesar Cipher
 
 alphabet = 'abcdfeghijklmnopqrstuvwxyz'
+punctuation = '.,?!\'-:;"'
 new_message = ''
 
 user_message = input('Enter your secret message:\n')
@@ -22,7 +23,15 @@ for character in user_message:
         new_character = upper_alphabet[new_position]
 
         new_message += new_character
+    
+    # elif character not in alphabet and character in punctuation:
+
+    #     position = punctuation.find(character)
+    #     new_character = punctuation[position]
+
+    #     new_message += new_character
+    
     elif character == " ":
         new_message += " "
 
-print('Your new message is '+ new_message)
+print('Your new message is \n'+ new_message)
